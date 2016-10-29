@@ -25,8 +25,8 @@ for (i=0; i < olds.length; i++) {
   } 
 }
 
-var origin_old = ["ạ", "ả" ,"ẹ", "ẻ", "ụ", "ủ", "ị", "ỉ","ỵ","ỷ", "Ạ", "Ả", "Ẹ", "Ẻ", "Ọ", "Ỏ", "Ụ", "Ủ","Ị","Ỉ","Ỵ","Ỷ"]
-var origin =["a","e","u","i","y","A","E","O","U","I"];
+var origin_old = ["ạ", "ả" ,"ẹ", "ẻ", "ụ", "ủ","ọ","ỏ", "ị", "ỉ","ỵ","ỷ", "Ạ", "Ả", "Ẹ", "Ẻ", "Ọ", "Ỏ", "Ụ", "Ủ","Ị","Ỉ","Ỵ","Ỷ"]
+var origin =["a","e","u","o","i","y","A","E","O","U","I"];
 var origin_mark = [776,785];
 
 k = 0;
@@ -46,7 +46,9 @@ for (i=0; i < olds.length; i++) {
     document.write ('"' +  olds[i]);
     document.write ('":"');
     document.write (news[i] + '"');
-    document.write (', </p></font>');
+    if (i < olds.length-1) {
+      document.write (', </p></font>');
+    }
 }
 document.write ('<p><font size="7" color="red">}}</p></font>');
 </script>
