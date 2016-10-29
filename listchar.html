@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<style type="text/css">p {float: left; padding: 0 15px; margin: 0; font-size: 80%;}</style>
+<script type="text/javascript">
+var olds = ["â","ă","ê","ô","ơ","ư","Â","Ă","Ê","Ô","Ơ","Ư"];
+var news = ["ʌ","я","є","o̷","ə","w","Ʌ","Δ","Ǝ","Ω","Ↄ","W"];
+var marks_old = ["ầ","ấ","ẫ","ậ","ẩ","ằ","ắ","ẵ","ặ","ẳ","ề","ế","ễ","ệ","ể","ồ","ố","ỗ","ộ","ổ","ờ","ớ","ỡ","ợ","ở","ừ","ứ","ữ","ự","ử","Ầ","Ấ","Ẫ","Ậ","Ẩ","Ằ","Ắ","Ẵ","Ặ","Ả","Ề","Ế","Ễ","Ệ","Ể","Ồ","Ố","Ỗ","Ộ","Ổ","Ờ","Ớ","Ỡ","Ợ","Ở","Ừ","Ứ","Ữ","Ự","Ử"];
+var marks_new = [768,769,771,776,785];
+
+document.writeln('');
+document.write ('<p><font size="7" color="red">{"char":{</p></font>');
+k = 0;
+for (i=0; i < olds.length; i++) {
+  for (j = 0; j < marks_new.length; j++) {
+
+    document.write ('<p><font size="7" color="red">');
+    document.write ('"' +  marks_old[k]);
+    document.write ('":"');
+    document.write (news[i] + '&#' + marks_new[j] + '"');
+    document.write (', </p></font>');
+    k = k + 1;
+  } 
+}
+
+var origin_old = ["ạ", "ả" ,"ẹ", "ẻ", "ụ", "ủ", "ị", "ỉ","ỵ","ỷ", "Ạ", "Ả", "Ẹ", "Ẻ", "Ọ", "Ỏ", "Ụ", "Ủ","Ị","Ỉ","Ỵ","Ỷ"]
+var origin =["a","e","u","i","y","A","E","O","U","I"];
+var origin_mark = [776,785];
+
+k = 0;
+for (i=0; i < origin.length; i++) {
+  for (j = 0; j < origin_mark.length; j++) {
+
+    document.write ('<p><font size="7" color="red">');
+    document.write ('"' +  origin_old[k]);
+    document.write ('":"');
+    document.write (origin[i] + '&#' + origin_mark[j] + '"');
+    document.write (', </p></font>');
+    k = k + 1;
+  } 
+}
+for (i=0; i < olds.length; i++) {
+    document.write ('<p><font size="7" color="red">');
+    document.write ('"' +  olds[i]);
+    document.write ('":"');
+    document.write (news[i] + '"');
+    document.write (', </p></font>');
+}
+document.write ('<p><font size="7" color="red">}}</p></font>');
+</script>
+</body>
+</html>
